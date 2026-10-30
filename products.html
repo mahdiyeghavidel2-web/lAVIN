@@ -213,6 +213,23 @@
             .collection-grid {
                 grid-template-columns: 1fr;
             }
+          .collection-picture {
+    height: 250px;
+    overflow: hidden;
+    background: #f2eee5;
+}
+
+.collection-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.collection-card:hover .collection-picture img {
+    transform: scale(1.05);
+}  
         }
     </style>
 </head>
