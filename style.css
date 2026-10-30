@@ -1,0 +1,162 @@
+/* LAVIN - Main Design */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Vazirmatn', sans-serif;
+    background: #f8f6f1;
+    color: #252b30;
+    direction: rtl;
+}
+
+header {
+    background: #fff;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #eee9df;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #263747;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a1845e;
+}
+
+button {
+    background: #263747;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a1845e;
+}
+
+.hero {
+    margin: 30px auto;
+    width: 90%;
+    min-height: 350px;
+    border-radius: 18px;
+    background: linear-gradient(110deg, #263747, #536475);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 45px;
+}
+
+.hero h1 {
+    font-size: 35px;
+    line-height: 1.8;
+}
+
+.hero p {
+    line-height: 2;
+    color: #eee8df;
+}
+
+.section,
+.products-section {
+    padding: 30px 7% 50px;
+}
+
+.categories,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category,
+.product-card {
+    background: white;
+    border: 1px solid #eee9df;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 18px;
+}
+
+.product-picture {
+    height: 210px;
+    background: #e9e3d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.product-info {
+    padding: 12px;
+}
+
+.price {
+    color: #a1845e;
+    font-weight: 700;
+}
+
+footer {
+    background: #263747;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 280px;
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .categories,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-picture {
+        height: 145px;
+    }
+}
