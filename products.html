@@ -3,88 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محصولات | LAVIN</title>
+    <title>مجموعه محصولات | LAVIN</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .collection-intro {
+            text-align: center;
+            padding: 55px 20px 35px;
+            background: #f4f0e8;
+        }
+
+        .collection-intro h1 {
+            color: #142b45;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .collection-intro p {
+            color: #777;
+            line-height: 2;
+        }
+
+        .collection-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 25px 15px;
+            background: #fff;
+        }
+
+        .collection-nav a {
+            text-decoration: none;
+            color: #142b45;
+            border: 1px solid #b89a61;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .collection-nav a:hover {
+            background: #142b45;
+            color: #fff;
+        }
+
+        .collection-section {
+            padding: 45px 6%;
+            scroll-margin-top: 25px;
+        }
+
+        .collection-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .collection-title h2 {
+            color: #142b45;
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .collection-title p {
+            color: #888;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .collection-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #eee9df;
+            box-shadow: 0 5px 20px rgba(20,43,69,.06);
+            transition: .3s;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(20,43,69,.12);
+        }
+
+        .collection-picture {
+            height: 190px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f2eee5;
+            font-size: 65px;
+        }
+
+        .collection-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .collection-info h3 {
+            color: #142b45;
+            margin-bottom: 10px;
+        }
+
+        .collection-info p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .collection-price {
+            color: #a8874e !important;
+            font-weight: bold;
+            font-size: 16px !important;
+            margin: 12px 0;
+        }
+
+        .collection-button {
+            display: inline-block;
+            background: #142b45;
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 7px;
+            font-family: inherit;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .collection-button:hover {
+            background: #a8874e;
+        }
+
+        .men-section {
+            background: #f5f3ee;
+        }
+
+        .custom-banner {
+            margin: 35px 6%;
+            padding: 35px 20px;
+            text-align: center;
+            background: #142b45;
+            color: white;
+            border-radius: 14px;
+        }
+
+        .custom-banner h2 {
+            margin-bottom: 12px;
+        }
+
+        .custom-banner p {
+            line-height: 2;
+            color: #e3dfd6;
+        }
+
+        .custom-banner a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 11px 25px;
+            background: #b89a61;
+            color: white;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+        @media (max-width: 750px) {
+            .collection-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 13px;
+            }
+
+            .collection-picture {
+                height: 145px;
+                font-size: 48px;
+            }
+
+            .collection-info {
+                padding: 13px 9px;
+            }
+
+            .collection-info h3 {
+                font-size: 15px;
+            }
+
+            .collection-info p {
+                font-size: 12px;
+            }
+
+            .collection-price {
+                font-size: 14px !important;
+            }
+
+            .collection-button {
+                padding: 9px 14px;
+                font-size: 12px;
+            }
+
+            .collection-intro h1 {
+                font-size: 25px;
+            }
+
+            .collection-section {
+                padding: 35px 4%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
     <div class="logo">LAVIN</div>
     <nav>
         <a href="index.html">صفحه اصلی</a>
-        <a href="products.html">محصولات</a>
-        <a href="#">زنانه</a>
-        <a href="#">مردانه</a>
+        <a href="#women">زنانه</a>
+        <a href="#men">مردانه</a>
+        <a href="custom-order.html">سفارش اختصاصی</a>
     </nav>
 </header>
 
-<section class="products-section">
-    <h1>مجموعه پوشاک لاوین</h1>
-    <p>انتخابی متناسب با سلیقه و سبک زندگی شما</p>
+<section class="collection-intro">
+    <h1>مجموعه پوشاک LAVIN</h1>
+    <p>
+        پوشاک، به انتخاب شما؛ تجربه‌ای فراتر از خرید
+        <br>
+        مجموعه‌ای از انتخاب‌های شیک برای سبک زندگی شما
+    </p>
+</section>
 
-    <div class="product-grid">
+<div class="collection-nav">
+    <a href="#women">مجموعه زنانه</a>
+    <a href="#men">مجموعه مردانه</a>
+</div>
 
-        <div class="product-card">
-            <div class="product-picture">👗</div>
-            <div class="product-info">
+<section class="collection-section" id="women">
+    <div class="collection-title">
+        <h2>مجموعه پوشاک زنانه</h2>
+        <p>زیبایی، ظرافت و اصالت در انتخاب شما</p>
+    </div>
+
+    <div class="collection-grid">
+
+        <article class="collection-card">
+            <div class="collection-picture">👗</div>
+            <div class="collection-info">
                 <h3>مانتو روزمره</h3>
-                <p>مناسب استفاده روزانه</p>
-                <p class="price">۱,۲۵۰,۰۰۰ تومان</p>
-                <button>مشاهده محصول</button>
+                <p>راحت و شیک برای استفاده روزانه</p>
+                <p class="collection-price">۱,۲۵۰,۰۰۰ تومان</p>
+                <a href="#" class="collection-button">مشاهده محصول</a>
             </div>
-        </div>
+        </article>
 
-        <div class="product-card">
-            <div class="product-picture">🧥</div>
-            <div class="product-info">
+        <article class="collection-card">
+            <div class="collection-picture">🧥</div>
+            <div class="collection-info">
                 <h3>مانتو رسمی</h3>
-                <p>مناسب محیط کار و مهمانی</p>
-                <p class="price">۱,۸۵۰,۰۰۰ تومان</p>
-                <button>مشاهده محصول</button>
+                <p>انتخابی جذاب برای محیط کار و مهمانی</p>
+                <p class="collection-price">۱,۸۵۰,۰۰۰ تومان</p>
+                <a href="#" class="collection-button">مشاهده محصول</a>
             </div>
-        </div>
+        </article>
 
-        <div class="product-card">
-            <div class="product-picture">👔</div>
-            <div class="product-info">
-                <h3>پیراهن مردانه</h3>
-                <p>مناسب استفاده روزمره و رسمی</p>
-                <p class="price">۹۸۰,۰۰۰ تومان</p>
-                <button>مشاهده محصول</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-picture">👖</div>
-            <div class="product-info">
-                <h3>شلوار مردانه</h3>
-                <p>طراحی ساده و کاربردی</p>
-                <p class="price">۱,۱۰۰,۰۰۰ تومان</p>
-                <button>مشاهده محصول</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-picture">🧣</div>
-            <div class="product-info">
+        <article class="collection-card">
+            <div class="collection-picture">🧣</div>
+            <div class="collection-info">
                 <h3>شال و روسری</h3>
-                <p>تنوع رنگ و طرح</p>
-                <p class="price">۳۵۰,۰۰۰ تومان</p>
-                <button>مشاهده محصول</button>
+                <p>تنوع رنگ و طرح برای استایل شما</p>
+                <p class="collection-price">۳۵۰,۰۰۰ تومان</p>
+                <a href="#" class="collection-button">مشاهده محصول</a>
             </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-picture">🧵</div>
-            <div class="product-info">
-                <h3>سفارش دوخت اختصاصی</h3>
-                <p>لباس متناسب با سلیقه شما</p>
-                <p class="price">با استعلام قیمت</p>
-                <button>ثبت درخواست</button>
-            </div>
-        </div>
+        </article>
 
     </div>
+</section>
+
+<section class="collection-section men-section" id="men">
+    <div class="collection-title">
+        <h2>مجموعه پوشاک مردانه</h2>
+        <p>سادگی، اعتمادبه‌نفس و استایل متمایز</p>
+    </div>
+
+    <div class="collection-grid">
+
+        <article class="collection-card">
+            <div class="collection-picture">👔</div>
+            <div class="collection-info">
+                <h3>پیراهن مردانه</h3>
+                <p>مناسب استفاده روزمره و رسمی</p>
+                <p class="collection-price">۹۸۰,۰۰۰ تومان</p>
+                <a href="#" class="collection-button">مشاهده محصول</a>
+            </div>
+        </article>
+
+        <article class="collection-card">
+            <div class="collection-picture">👖</div>
+            <div class="collection-info">
+                <h3>شلوار مردانه</h3>
+                <p>طراحی ساده و کاربردی</p>
+                <p class="collection-price">۱,۱۰۰,۰۰۰ تومان</p>
+                <a href="#" class="collection-button">مشاهده محصول</a>
+            </div>
+        </article>
+
+        <article class="collection-card">
+            <div class="collection-picture">🧥</div>
+            <div class="collection-info">
+                <h3>پوشاک روزمره مردانه</h3>
+                <p>انتخابی راحت برای استایل روزانه</p>
+                <p class="collection-price">۱,۴۵۰,۰۰۰ تومان</p>
+                <a href="#" class="collection-button">مشاهده محصول</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="custom-banner">
+    <h2>لباس دلخواه شما، با طراحی اختصاصی</h2>
+    <p>اگر به دنبال لباسی متفاوت و متناسب با سلیقه خود هستید، سفارش دوخت اختصاصی لاوین را ببینید.</p>
+    <a href="custom-order.html">مشاهده سفارش اختصاصی</a>
 </section>
 
 <footer>
