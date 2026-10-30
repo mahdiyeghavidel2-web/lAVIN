@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAVIN | لاوین</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: #f8f6f1;
+  color: #252b30;
+}
+
+header {
+  background: white;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #eee9df;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  color: #263747;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search {
+  border: 1px solid #ddd6ca;
+  border-radius: 25px;
+  padding: 9px 14px;
+  width: 145px;
+  font-family: inherit;
+}
+
+.hero {
+  margin: 30px auto;
+  width: 90%;
+  min-height: 350px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #263747, #536475);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 45px;
+}
+
+.hero-content {
+  max-width: 480px;
+}
+
+.hero h1 {
+  font-size: 35px;
+  line-height: 1.8;
+}
+
+.hero p {
+  color: #eee8df;
+  line-height: 2;
+}
+
+.hero button {
+  background: #c6a77b;
+  color: #fff;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 8px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.section {
+  padding: 20px 7% 45px;
+}
+
+.section h2 {
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.category {
+  background: white;
+  padding: 28px 15px;
+  text-align: center;
+  border-radius: 13px;
+  border: 1px solid #eee9df;
+}
+
+.category h3 {
+  margin: 5px 0;
+  color: #263747;
+}
+
+.category p {
+  color: #777;
+  font-size: 13px;
+}
+
+footer {
+  background: #263747;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 5%;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .search {
+    width: 110px;
+  }
+
+  .hero {
+    min-height: 290px;
+    padding: 25px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LAVIN</div>
+
+  <nav>
+    <a href="#women">زنانه</a>
+    <a href="#men">مردانه</a>
+    <a href="#custom">سفارش اختصاصی</a>
+  </nav>
+
+  <div class="actions">
+    <input class="search" type="search" placeholder="جست‌وجوی لباس">
+    <span>♡</span>
+    <span>🛍</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>استایل تو، انتخاب تو</h1>
+      <p>
+        در لاوین، دنیایی از پوشاک زنانه و مردانه
+        با تنوعی از سبک‌های روزمره تا رسمی منتظر شماست.
+      </p>
+      <button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
+        مشاهده محصولات
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <h2>دسته‌بندی محصولات</h2>
+
+    <div class="categories">
+      <div class="category" id="women">
+        <h3>پوشاک زنانه</h3>
+        <p>مانتو، شومیز، لباس روزمره و مجلسی</p>
+      </div>
+
+      <div class="category" id="men">
+        <h3>پوشاک مردانه</h3>
+        <p>پیراهن، شلوار، کت و لباس روزمره</p>
+      </div>
+
+      <div class="category" id="custom">
+        <h3>سفارش اختصاصی</h3>
+        <p>لباس با طرح و اندازه دلخواه شما</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  LAVIN | لاوین
+  <p>پوشاک، به انتخاب شما؛ تجربه‌ای فراتر از خرید</p>
+</footer>
+
+</body>
+</html>
