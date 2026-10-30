@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفارش اختصاصی | LAVIN</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .order-container {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid #eee9df;
+        }
+
+        .order-container h1 {
+            color: #263747;
+            text-align: center;
+        }
+
+        .order-container p {
+            text-align: center;
+            color: #777;
+        }
+
+        .order-form {
+            display: grid;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd6ca;
+            border-radius: 8px;
+            font-family: inherit;
+            width: 100%;
+        }
+
+        .form-group textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .order-note {
+            background: #f8f6f1;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #777;
+            line-height: 2;
+        }
+
+        @media (max-width: 600px) {
+            .order-container {
+                margin: 20px 5%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">LAVIN</div>
+    <nav>
+        <a href="index.html">صفحه اصلی</a>
+        <a href="products.html">محصولات</a>
+        <a href="custom-order.html">سفارش اختصاصی</a>
+    </nav>
+</header>
+
+<main class="order-container">
+
+    <h1>لباس دلخواهت رو سفارش بده</h1>
+    <p>مدل مورد علاقه‌ات رو انتخاب کن و جزئیاتش رو برای ما بنویس.</p>
+
+    <form class="order-form" onsubmit="event.preventDefault(); alert('درخواست شما به صورت آزمایشی ثبت شد.');">
+
+        <div class="form-group">
+            <label>نام و نام خانوادگی</label>
+            <input type="text" placeholder="نام خود را وارد کنید" required>
+        </div>
+
+        <div class="form-group">
+            <label>نوع پوشاک</label>
+            <select required>
+                <option value="">انتخاب کنید</option>
+                <option>مانتو</option>
+                <option>شومیز</option>
+                <option>لباس مجلسی</option>
+                <option>پیراهن مردانه</option>
+                <option>شلوار</option>
+                <option>سایر موارد</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>رنگ مورد نظر</label>
+            <input type="text" placeholder="مثلاً مشکی، کرم یا آبی">
+        </div>
+
+        <div class="form-group">
+            <label>سایز لباس</label>
+            <select>
+                <option>انتخاب سایز</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>دوخت با اندازه اختصاصی</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>توضیحات سفارش</label>
+            <textarea placeholder="مدل، جنس پارچه و جزئیات مورد نظرتان را بنویسید"></textarea>
+        </div>
+
+        <div class="order-note">
+            ثبت این فرم در نسخه فعلی نمایشی است و اطلاعات به سرور ارسال نمی‌شود.
+            امکان ثبت و پیگیری واقعی سفارش در نسخه‌های بعدی اضافه خواهد شد.
+        </div>
+
+        <button type="submit">ثبت درخواست سفارش</button>
+
+    </form>
+</main>
+
+<footer>
+    LAVIN | پوشاک، به انتخاب شما
+</footer>
+
+</body>
+</html>
